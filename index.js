@@ -44,6 +44,8 @@ io.on("connection", (socket) => {
 
   socket.on('disconnect', () => {
     console.log(`le joueur ${socket.id} s'est déconnecté`);
+    partie.supprimeJoueur(socket.id);
+    io.emit('maj-joueurs', partie.joueurs);
   });
 
 });
