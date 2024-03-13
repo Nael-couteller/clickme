@@ -26,7 +26,7 @@ io.on("connection", (socket) => {
   socket.emit('initialise', partie.nombreCibles);
   socket.emit('nouvelle-cible', partie.numeroCible);
 
-  // Ajoute une joueur à la partie
+  // Ajoute un.e joueur à la partie
   partie.nouveauJoueur(socket.id);
   // Informe les clients
   io.emit('maj-joueurs', partie.joueurs);
