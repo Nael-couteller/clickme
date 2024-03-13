@@ -7,8 +7,8 @@
 
  <div align = 'center'> <h1> Les règles du jeu </h1> </div>
 <wh>
-<p>*cliquer le plus vite posssible sur la cible verte*</p>
-<p>*interdiction d'utilisation d'assist tool et exploit :o *</p>
+<p>cliquer le plus vite posssible sur la cible verte</p>
+<p>interdiction d'utilisation d'assist tool et exploit >:(</p>
 
 
 **prérequis**
