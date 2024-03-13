@@ -34,6 +34,9 @@ io.on("connection", (socket) => {
   // On écoute des évènements sur le socket
   socket.on('click-cible',  (numeroCible) => {
     if (numeroCible == partie.numeroCible){
+      let joueur = partie.getJoueurById(socket.id);
+      joueur.maj_score();
+      console.log(joueur);
       partie.nouvelleCible();
       // Envoie le message 'nouvelle-cible à tous les sockets.
       io.emit('nouvelle-cible', partie.numeroCible);
@@ -47,6 +50,8 @@ io.on("connection", (socket) => {
     partie.supprimeJoueur(socket.id);
     io.emit('maj-joueurs', partie.joueurs);
   });
+
+
 
 });
 
