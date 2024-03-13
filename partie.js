@@ -70,9 +70,10 @@ export class Partie {
  * └──────────────────┘
  */
 class Joueur {
-    constructor(socketId, nom){
+    constructor(socketId, nom, score){
         this.nom = nom;
         this.socketId = socketId;
+        this.score = score;
     }
 
 }
