@@ -2,6 +2,8 @@ const socket = io();
 const jeuxDiv = document.getElementById('jeu');
 const gagneDiv = document.getElementById('gagne');
 const joueursTable = document.getElementById('tableau-joueurs');
+const UpdateForm = document.getElementById("FormUsername");
+const FormInput = document.getElementById("username");
 
 // Gère le click sur une cible
 function clickCible(event){
@@ -9,7 +11,10 @@ function clickCible(event){
     console.log(`click sur la cible ${numeroCible}`);
     socket.emit('click-cible', numeroCible);
 }
-
+UpdateForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log(FormInput.value);
+});
 // Sockets
 socket.on('initialise', function(nombreCible){
     // Vide jeuDiv
@@ -58,3 +63,14 @@ socket.on('maj-joueurs',function (joueurs){
         nomTd.textContent = joueur.nom;
     }
 });
+
+UpdateForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    let check = "                               ";
+    let name = FormInput.value;
+    if (name != null & name !="" & check.lastIndexOf(name) <=0 ) {
+        socket.emit('nom-joueur', name);
+    } else {
+        alert("Your pseudo can't be empty");
+    }
+})

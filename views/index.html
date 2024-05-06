@@ -1,35 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/index.css">
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/index.js" defer></script>
 
-    <title>Clique en premier sur la cible</title>
-  </head>
-  <body>
-    
-    <h1>Cliquez la cible verte en premier. </h1>
-    <div id="conteneur">
-      <div>
-        <div id="gagne"></div>
-        <div id="jeu">Connexion en cours</div>
-      </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Nom</th>
-            </tr>
-          </thead>
-          <tbody id="tableau-joueurs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/index.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/index.js" defer></script>
 
-          </tbody>
-        </table>
-      </div>
+  <title>Clique en premier sur la cible</title>
+</head>
+
+<body>
+
+  <h1>Cliquez la cible verte en premier. </h1>
+  <div id="conteneur">
+    <div>
+      <div id="gagne"></div>
+      <div id="jeu">Connexion en cours</div>
+      <!--  formulaire pour changer de nom -->
+      <form id="FormUsername">
+        <input id="username" type="text" name="username" placeholder="Update username" maxlength="30"/>
+        <input type="submit"></input>
+      </form>
+      <!-- fin du formulaire -->
     </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+          </tr>
+        </thead>
+        <tbody id="tableau-joueurs">
+        </tbody>
+      </table>
     </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>

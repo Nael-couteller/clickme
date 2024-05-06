@@ -56,7 +56,12 @@ export class Partie {
     getJoueurById(socketId){
         return this.joueurs.find((joueur) => joueur.socketId == socketId);
     }
+    changeNomJoueur(socketId, nouveauNom){
+        let joueur = this.getJoueurById(socketId);
+        joueur.changeNom(nouveauNom);
+    }
 }
+
 
 
 /**
@@ -74,6 +79,8 @@ class Joueur {
         this.nom = nom;
         this.socketId = socketId;
     }
-
+    changeNom(nouveauNom){
+        this.nom = nouveauNom;
+    }
 }
 
