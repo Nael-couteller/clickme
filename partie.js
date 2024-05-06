@@ -79,7 +79,7 @@ class Joueur {
     }
 
     maj_score(){  
-        this.score += 1;
+        return this.score += 1;
     }
     
 }

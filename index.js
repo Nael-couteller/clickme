@@ -40,9 +40,8 @@ io.on("connection", (socket) => {
       partie.nouvelleCible();
       // Envoie le message 'nouvelle-cible à tous les sockets.
       io.emit('nouvelle-cible', partie.numeroCible);
-      
+
       // Envoie le message 'gagne' seulement à ce socket.
-      
       socket.emit('gagne');
     }
   });
