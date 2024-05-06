@@ -36,11 +36,11 @@ io.on("connection", (socket) => {
     if (numeroCible == partie.numeroCible){
       let joueur = partie.getJoueurById(socket.id);
       joueur.maj_score();
+      io.emit('score',joueur.maj_score);
       console.log(joueur);
       partie.nouvelleCible();
       // Envoie le message 'nouvelle-cible à tous les sockets.
       io.emit('nouvelle-cible', partie.numeroCible);
-
       // Envoie le message 'gagne' seulement à ce socket.
       socket.emit('gagne');
     }
