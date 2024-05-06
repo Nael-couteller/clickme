@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url';
 import { Server } from 'socket.io';
 import { join, dirname } from 'node:path';
 import { Partie } from './partie.js';
-import { Joueur } from './partie.js';
 
 // Mise en place du serveur
 const app = express();
@@ -45,7 +44,6 @@ io.on("connection", (socket) => {
       // Envoie le message 'gagne' seulement à ce socket.
       
       socket.emit('gagne');
-      socket.emit('maj-score', joueur.score);
     }
   });
 
