@@ -1,8 +1,8 @@
 # CLICK ME 
 ## Ce script contient un jeu de cases à cliquer  
-<p>-C'est un dépot en node js qui fournit un jeu et qui se charge de le publier sur le port 3000 grace aux frameworks socket.io et expressjs.-</p>
+- C'est un dépot en node js qui fournit un jeu et qui se charge de le publier sur le port 3000 grace aux frameworks [socket.io](https://socket.io) et [expressjs](expressjs.com).
 
-[socket.io](https://socket.io) et [expressjs](expressjs.com).
+
 
 
  <div align = 'center'> <h1> Les règles du jeu </h1> </div>
@@ -11,12 +11,16 @@
 <p>interdiction d'utilisation d'assist tool et exploit >:(</p>
 
 
-**prérequis**
+# **prérequis**
 <p>node.js et git bash</p>
 
 <div align = 'center'> <h2> déploiement </h2> </div>
 
-- Installer les dépendances: `npm install`
-- Lancer le serveur: `npx nodemon index.js`
-
-
+- Installer les dépendances:
+  ```
+  npm install socketio expressjs
+  ```
+- Lancer le serveur: 
+  ```
+  npx nodemon index.js
+  ```
