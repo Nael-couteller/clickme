@@ -71,7 +71,7 @@ export class Partie {
  * |                  |
  * └──────────────────┘
  */
-class Joueur {
+export class Joueur {
     constructor(socketId, nom){
         this.nom = nom;
         this.socketId = socketId;
