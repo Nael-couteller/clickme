@@ -56,5 +56,7 @@ socket.on('maj-joueurs',function (joueurs){
         const ligne = joueursTable.insertRow();
         let nomTd = ligne.insertCell();
         nomTd.textContent = joueur.nom;
+        let nomTd2 = ligne.insertCell();
+        nomTd2.textContent = joueur.score;
     }
 });
